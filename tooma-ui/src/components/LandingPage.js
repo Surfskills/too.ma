@@ -23,17 +23,33 @@ const LandingPage = ({ username }) => {
   // Fetch Creator Profile
   useEffect(() => {
     const fetchCreatorProfile = async () => {
+      // Validate the username before making the request
+      if (!username) {
+        setError(new Error('Username is undefined or invalid.'));
+        setLoading(false);
+        return;
+      }
+
       console.log(`Fetching profile for username: ${username}`);
+
       try {
         const profileRes = await axios.get(
           `https://tooma-backend.onrender.com/auth/creator_profile/${username}/`
         );
+        
+        // Log the received profile data
         console.log('Profile data received:', profileRes.data);
+
+        // Set the profile data if successful
         setProfileData(profileRes.data);
-        setLoading(false);
       } catch (error) {
+        // Log any errors encountered
         console.error('Error fetching profile:', error);
+
+        // Set the error state
         setError(error);
+      } finally {
+        // Always set loading to false once the request is complete
         setLoading(false);
       }
     };
