@@ -23,13 +23,16 @@ const LandingPage = ({ username }) => {
   // Fetch Creator Profile
   useEffect(() => {
     const fetchCreatorProfile = async () => {
+      console.log(`Fetching profile for username: ${username}`);
       try {
         const profileRes = await axios.get(
           `https://tooma-backend.onrender.com/auth/creator_profile/retrieve/${username}/`
         );
+        console.log('Profile data received:', profileRes.data);
         setProfileData(profileRes.data);
         setLoading(false);
       } catch (error) {
+        console.error('Error fetching profile:', error);
         setError(error);
         setLoading(false);
       }
