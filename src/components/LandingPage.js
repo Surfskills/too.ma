@@ -38,7 +38,7 @@ const LandingPage = () => {
     };
 
     fetchData();
-  }, [username]); // Re-fetch data when the username changes
+  }, [username]); 
 
   if (loading) {
     return (
