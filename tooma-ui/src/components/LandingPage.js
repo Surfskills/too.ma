@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom'; // Import useParams to access URL parameters
+import axios from 'axios';
 import {
   Typography,
   Button,
@@ -10,12 +12,12 @@ import {
   Grid,
   Avatar,
 } from '@mui/material';
-import axios from 'axios';
 import styles from './LandingPage.module.css';
 
 const currentYear = new Date().getFullYear();
 
-const LandingPage = ({ username }) => {
+const LandingPage = () => {
+  const { username } = useParams(); // Get username from the URL
   const [profileData, setProfileData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -36,7 +38,7 @@ const LandingPage = ({ username }) => {
         const profileRes = await axios.get(
           `https://tooma-backend.onrender.com/auth/creator_profile/${username}/`
         );
-        
+
         // Log the received profile data
         console.log('Profile data received:', profileRes.data);
 
