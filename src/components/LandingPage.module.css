@@ -1,0 +1,109 @@
+/* src/components/LandingPage.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.loadingContainer, .errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loadingText, .errorText {
+  color: #333;
+}
+
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.displayName {
+  font-weight: bold;
+}
+
+.shortBio {
+  color: #777;
+}
+
+.productsSection {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.productCard {
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.productImage {
+  object-fit: cover;
+}
+
+.productTitle {
+  font-weight: bold;
+}
+
+.productMessage {
+  color: #555;
+}
+
+.productPrice {
+  color: #00c853;
+  margin-top: 10px;
+}
+
+.viewMoreButton {
+  margin-top: 10px;
+}
+
+.socialLinksSection {
+  margin-bottom: 40px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}

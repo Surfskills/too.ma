@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+---
 
-First, run the development server:
+# Tooma-UI Frontend
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Overview
+
+Tooma-UI Frontend is a React application designed to handle file uploads, generate presigned URLs for downloading files, and display shared links on a user-friendly landing page. The project integrates Google OAuth for authentication.
+
+## Table of Contents
+
+1. [Prerequisites](#prerequisites)
+2. [Installation](#installation)
+3. [Running the Project](#running-the-project)
+4. [Project Structure](#project-structure)
+5. [Features](#features)
+6. [Troubleshooting](#troubleshooting)
+7. [Contributing](#contributing)
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Node.js and npm installed
+- Create React App globally installed (`npx create-react-app`)
+
+## Installation
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/your-repo/tooma-ui.git
+    cd tooma-ui/frontend
+    ```
+
+2. **Install dependencies**:
+    ```sh
+    npm install
+    ```
+
+## Running the Project
+
+1. **Start the React development server**:
+    ```sh
+    npm start
+    ```
+
+The React application will run on `http://localhost:3000`.
+
+## Project Structure
+
+```
+frontend/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AppBar.js
+│   │   ├── FormComponent.js
+│   │   ├── GoogleLoginComponent.js
+│   │   ├── LandingPage.js
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Google OAuth Authentication**: Secure login using Google accounts.
+- **File Upload**: Upload files and generate presigned URLs for secure access.
+- **Shared Link Landing Page**: Display shared link information on a user-friendly page.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Troubleshooting
 
-## Learn More
+- **Ensure you are in the correct directory**: Verify you are inside the `tooma-ui/frontend` project directory.
+- **Dependencies**: Ensure all dependencies are installed by running `npm install`.
+- **CORS Issues**: Make sure your backend is configured to allow requests from your frontend.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fred Osege
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Shadrack Apollo
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+"# tooma-UI" 
