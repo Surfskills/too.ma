@@ -36,7 +36,7 @@ const LandingPage = () => {
 
       try {
         const profileRes = await axios.get(
-          `https://tooma-backend.onrender.com/auth/creator_profile/${username}/`
+          `https://tooma-backend.onrender.com/auth/creator_profile/retrieve/${username}/`
         );
 
         // Log the received profile data
