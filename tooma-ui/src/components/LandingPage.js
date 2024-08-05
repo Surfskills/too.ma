@@ -26,7 +26,7 @@ const LandingPage = ({ username }) => {
       console.log(`Fetching profile for username: ${username}`);
       try {
         const profileRes = await axios.get(
-          `https://tooma-backend.onrender.com/auth/creator_profile/retrieve/${username}/`
+          `https://tooma-backend.onrender.com/auth/creator_profile/${username}/`
         );
         console.log('Profile data received:', profileRes.data);
         setProfileData(profileRes.data);
