@@ -1,0 +1,17 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(243,244,246,1) 100%);
+}
+
+footer {
+  background-color: #f3f4f6;
+}
