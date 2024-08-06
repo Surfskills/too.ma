@@ -22,7 +22,7 @@
 
 .profileCard {
   width: 100%; /* Ensures full width for alignment */
-  max-width: 1200px; /* Aligns with the container's max width */
+  max-width: 1000px; /* Aligns with the container's max width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #ffffff;
@@ -32,8 +32,8 @@
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   margin: 0 auto;
   border: 4px solid #e0e0e0;
   margin-bottom: 15px; /* Reduced margin */
@@ -49,7 +49,7 @@
 
 .socialLinks a {
   color: #ffffff;
-  background-color: #007bff;
+  background-color: #00ff0df8;
   padding: 8px 12px;
   border-radius: 4px;
   text-decoration: none;
@@ -58,7 +58,7 @@
 }
 
 .socialLinks a:hover {
-  background-color: #0056b3;
+  background-color: hsl(125, 83%, 44%);
 }
 
 /* Product Section */
