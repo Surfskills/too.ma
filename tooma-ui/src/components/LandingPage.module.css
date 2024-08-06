@@ -2,9 +2,12 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px 20px; /* Added vertical padding for more spacing */
   font-family: 'Roboto', sans-serif;
   background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Profile Section */
@@ -13,6 +16,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  width: 100%;
 }
 
 .profileCard {
@@ -22,7 +26,7 @@
   border-radius: 10px;
   background-color: #ffffff;
   overflow: hidden;
-  padding: 20px;
+  padding: 30px 20px; /* Added more padding for spacing */
   text-align: center;
 }
 
@@ -62,6 +66,8 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  width: 100%; /* Ensures the section takes full width */
+  margin-top: 20px; /* Ensures consistent top spacing */
 }
 
 .productCard {
@@ -72,7 +78,9 @@
   background-color: #ffffff;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .productCard:hover {
@@ -134,6 +142,7 @@
   background-color: #ffffff;
   border-top: 1px solid #e0e0e0;
   margin-top: 40px;
+  width: 100%; /* Ensures the footer spans the full container width */
 }
 
 .footer a {
@@ -143,4 +152,17 @@
 
 .footer a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .productCard {
+    width: calc(50% - 20px); /* Two cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .productCard {
+    width: 100%; /* One card per row on very small screens */
+  }
 }
