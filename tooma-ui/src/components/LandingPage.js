@@ -137,33 +137,42 @@ const LandingPage = () => {
       )}
 
       <Grid container spacing={3} className={styles.productsSection}>
-        {profileData?.file_uploads?.map((upload) => (
-          <Grid item xs={12} sm={6} md={4} key={upload.unique_id}>
+        {profileData?.products?.map((product) => (
+          <Grid item xs={12} sm={6} md={4} key={product.unique_id}>
             <Card className={styles.productCard}>
               <CardMedia
                 component="img"
                 height="140"
-                image={upload.banner}
-                alt={upload.title}
+                image={product.banner}
+                alt={product.title}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  {upload.title}
+                  {product.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  {upload.message}
+                  {product.message}
                 </Typography>
-                <Typography variant="h6">${upload.payment_amount}</Typography>
+                <Typography variant="h6">${product.payment_amount}</Typography>
               </CardContent>
               <CardActions>
                 <Button
                   variant="contained"
                   color="primary"
-                  href={upload.metadata_link}
+                  href={product.metadata_link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View More
+                  View Details
+                </Button>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  href={product.payment_link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Buy Now
                 </Button>
               </CardActions>
             </Card>
