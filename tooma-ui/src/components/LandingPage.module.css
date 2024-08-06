@@ -3,11 +3,13 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #e09eff, #8f00ff);
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  color: #fff;
 }
 
 /* Profile Section */
@@ -15,69 +17,77 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Reduced bottom margin */
+  margin-bottom: 30px; /* More spacing for aesthetics */
   width: 100%;
-  padding: 0 20px; /* Added horizontal padding for alignment */
+  padding: 0 20px;
 }
 
 .profileCard {
-  width: 100%; /* Ensures full width for alignment */
-  max-width: 1000px; /* Aligns with the container's max width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: #ffffff;
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  padding: 20px;
+  padding: 40px;
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profileCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .avatar {
   width: 130px;
   height: 130px;
   margin: 0 auto;
-  border: 4px solid #e0e0e0;
-  margin-bottom: 15px; /* Reduced margin */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 4px solid #fff;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .socialLinks {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Reduced top margin */
-  gap: 10px;
+  margin-top: 20px;
+  gap: 15px;
 }
 
 .socialLinks a {
   color: #ffffff;
-  background-color: #00ff0df8;
-  padding: 8px 12px;
-  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px 15px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s;
-  font-size: 14px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px;
 }
 
 .socialLinks a:hover {
-  background-color: hsl(125, 83%, 44%);
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
 }
 
 /* Product Section */
 .productsSection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
   width: 100%;
-  max-width: 1200px; /* Aligns with the container's max width */
-  padding: 0 20px; /* Added horizontal padding for alignment */
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .productCard {
-  max-width: 300px;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: #ffffff;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
@@ -86,86 +96,94 @@
 }
 
 .productCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .productCard img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.productCard img:hover {
+  transform: scale(1.05);
 }
 
 .productCard .MuiCardContent-root {
-  padding: 15px;
+  padding: 20px;
 }
 
 .productCard .MuiTypography-h5 {
-  font-weight: 600;
-  margin-bottom: 8px;
-  font-size: 18px;
-  color: #333333;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #fff;
 }
 
 .productCard .MuiTypography-body2 {
-  color: #777;
-  margin-bottom: 12px;
-  font-size: 14px;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 
 .productCard .MuiTypography-h6 {
-  color: #007bff;
+  color: #ffd700;
   font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .MuiCardActions-root {
-  padding: 16px;
+  padding: 20px;
   justify-content: center;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .MuiButton-containedPrimary {
-  background-color: #007bff;
+  background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
-  transition: background-color 0.3s;
-  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+  font-weight: 600;
 }
 
 .MuiButton-containedPrimary:hover {
-  background-color: #0056b3;
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
 }
 
 /* Footer Section */
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #ffffff;
-  border-top: 1px solid #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 40px;
   width: 100%;
-  max-width: 1200px; /* Aligns with the container's max width */
+  max-width: 1200px;
 }
 
 .footer a {
-  color: #007bff;
+  color: #ffd700;
   text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-  .productCard {
-    width: calc(50% - 20px); /* Two cards per row on smaller screens */
+@media (max-width: 1024px) {
+  .productsSection {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
   }
 }
 
-@media (max-width: 480px) {
-  .productCard {
-    width: 100%; /* One card per row on very small screens */
+@media (max-width: 768px) {
+  .productsSection {
+    grid-template-columns: repeat(1, 1fr); /* One column on very small screens */
   }
 }
