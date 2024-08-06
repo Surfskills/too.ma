@@ -22,7 +22,7 @@
 
 .profileCard {
   width: 100%; /* Ensures full width for alignment */
-  max-width: 1000px; /* Aligns with the container's max width */
+  max-width: 800px; /* Aligns with the container's max width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #ffffff;
