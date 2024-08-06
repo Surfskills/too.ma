@@ -1,6 +1,6 @@
 /* Container Styles */
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   font-family: 'Roboto', sans-serif;
@@ -22,7 +22,7 @@
 
 .profileCard {
   width: 100%; /* Ensures full width for alignment */
-  max-width: 1200px; /* Aligns with the container's max width */
+  max-width: 1000px; /* Aligns with the container's max width */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #ffffff;
@@ -68,7 +68,7 @@
   gap: 20px;
   justify-content: center;
   width: 100%;
-  max-width: 1200px; /* Aligns with the container's max width */
+  max-width: 1000px; /* Aligns with the container's max width */
   padding: 0 20px; /* Added horizontal padding for alignment */
 }
 
