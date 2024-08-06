@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'; // Import useParams to access URL parameters
 import axios from 'axios';
 import {
   Typography,
@@ -25,6 +25,7 @@ const LandingPage = () => {
   // Fetch Creator Profile
   useEffect(() => {
     const fetchCreatorProfile = async () => {
+      // Validate the username before making the request
       if (!username) {
         setError(new Error('Username is undefined or invalid.'));
         setLoading(false);
@@ -38,14 +39,19 @@ const LandingPage = () => {
           `https://tooma-backend.onrender.com/auth/creator_profile/retrieve/${username}/`
         );
 
+        // Log the received profile data
         console.log('Profile data received:', profileRes.data);
 
+        // Set the profile data if successful
         setProfileData(profileRes.data);
       } catch (error) {
+        // Log any errors encountered
         console.error('Error fetching profile:', error);
 
+        // Set the error state
         setError(error);
       } finally {
+        // Always set loading to false once the request is complete
         setLoading(false);
       }
     };
@@ -136,7 +142,7 @@ const LandingPage = () => {
             <Card className={styles.productCard}>
               <CardMedia
                 component="img"
-                height="200"
+                height="140"
                 image={upload.banner}
                 alt={upload.title}
               />
