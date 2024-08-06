@@ -142,7 +142,7 @@ const LandingPage = () => {
             <Card className={styles.productCard}>
               <CardMedia
                 component="img"
-                height="200"
+                height="140"
                 image={upload.banner}
                 alt={upload.title}
               />
