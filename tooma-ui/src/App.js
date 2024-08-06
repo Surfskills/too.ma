@@ -7,7 +7,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/shared/:uniqueid/:buyerInfoId" element={<LandingPage />} />
-        <Route path="/shared/:username" element={<LandingPage />} />
+        <Route path="/:username" element={<LandingPage />} />
         {/* Add other routes here */}
       </Routes>
     </Router>

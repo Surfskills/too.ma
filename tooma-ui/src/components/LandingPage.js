@@ -137,42 +137,33 @@ const LandingPage = () => {
       )}
 
       <Grid container spacing={3} className={styles.productsSection}>
-        {profileData?.products?.map((product) => (
-          <Grid item xs={12} sm={6} md={4} key={product.unique_id}>
+        {profileData?.file_uploads?.map((upload) => (
+          <Grid item xs={12} sm={6} md={4} key={upload.unique_id}>
             <Card className={styles.productCard}>
               <CardMedia
                 component="img"
                 height="140"
-                image={product.banner}
-                alt={product.title}
+                image={upload.banner}
+                alt={upload.title}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                  {product.title}
+                  {upload.title}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
-                  {product.message}
+                  {upload.message}
                 </Typography>
-                <Typography variant="h6">${product.payment_amount}</Typography>
+                <Typography variant="h6">${upload.payment_amount}</Typography>
               </CardContent>
               <CardActions>
                 <Button
                   variant="contained"
                   color="primary"
-                  href={product.metadata_link}
+                  href={upload.metadata_link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View Details
-                </Button>
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  href={product.payment_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Buy Now
+                  View More
                 </Button>
               </CardActions>
             </Card>
@@ -183,7 +174,7 @@ const LandingPage = () => {
       <div className={styles.footer}>
         <Typography variant="body2" color="textSecondary">
           &copy; {currentYear} Tooma. All rights reserved.{' '}
-          <Link href="https://tooma.com">Tooma</Link>
+          <Link href="https://app.tooma.app">Tooma</Link>
         </Typography>
       </div>
     </div>
