@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
-import LandingPage from './components/DownloadPage';
+import DownloadPage from './components/DownloadPage';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // Create a custom theme for Material-UI
