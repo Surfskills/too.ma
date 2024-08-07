@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LandingPage from './components/LandingPage';
+import LandingPage from './components/DownloadPage';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 // Create a custom theme for Material-UI
@@ -23,7 +24,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route path="/shared/:uniqueid/:buyerInfoId" element={<LandingPage />} />
+          <Route path="/:uniqueid/:buyerInfoId" element={<DownloadPage />} />
           <Route path="/:username" element={<LandingPage />} />
           {/* Add other routes here */}
         </Routes>
