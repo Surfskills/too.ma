@@ -172,7 +172,7 @@ const DownloadPage = () => {
         const buyerData = response.data;
         if (buyerData.payment_status === 'paid') {
           console.log('Payment verified. Redirecting to download page.');
-          window.location.href = `https://toomaapp-git-main-experiolearns-projects.vercel.app/shared/${buyerData.file_upload_unique_id}/${buyerData.buyer_info_id}/`;
+          window.location.href = `https://too-ma.vercel.app/${buyerData.file_upload_unique_id}/${buyerData.buyer_info_id}/`;
         } else {
           alert('Email Verified! Payment Status: ' + buyerData.payment_status);
         }
