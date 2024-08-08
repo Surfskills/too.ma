@@ -24,7 +24,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route path="/:unique_id" element={<DownloadPage />} />
+          <Route path="/:uniqueid/:buyerInfoId" element={<DownloadPage />} />
           <Route path="/:username" element={<LandingPage />} />
           {/* Add other routes here */}
         </Routes>
